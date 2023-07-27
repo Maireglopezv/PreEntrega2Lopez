@@ -16,7 +16,7 @@ let usuario = prompt("Ingresa tu Nombre de Usuario")
 let correo = prompt("Ingresa tu Correo Electrónico")
 
 let usuarioNuevo = new Usuario(usuario, correo);
-let bienvenida = alert("Bienvenido " + usuario + " ✨" + " .Nuestra Biblioteca Virtual cuenta con diversos libros de tres reconocidos autores. Echa un vistazo!😉")
+let bienvenida = alert("Bienvenido " + usuario + " ✨" + " .Nuestra Biblioteca Virtual cuenta con diversos libros de tres reconocidos autores. ¡Echa un vistazo!😉")
 console.log(usuarioNuevo);
 
 /*Datos de Libros Disponibles*/
@@ -196,6 +196,7 @@ function filtrarLibro(){
     const resultado = libros.filter(filtrarAutor).filter(filtrarMinimo).filter(filtrarMaximo);
     if(resultado.length){
         mostrarLibros(resultado);
+        console.log("¡Gracias por tu búsqueda!")
     }else {
         console.log("No se encuentran libros disponibles de acuerdo a tu busqueda");
     }
@@ -230,6 +231,5 @@ function filtrarMaximo(libro){
 
 /*Visualizacion de libros*/
 
-console.log("¡Gracias por tu búsqueda!")
 filtrarLibro(libros)
 
